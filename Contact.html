@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+
+    body {
+      background-color:#84bbe8;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      margin: 40px;
+      gap: 30px;
+    }
+
+    .container div {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 5%;
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+
+      opacity: 0;
+      transform: translateX(-50px) scale(0.5);
+      animation: popUp 2s forwards;
+    }
+    
+    #contact {
+      text-align: left;
+      line-height: 2;
+      font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    #submit {
+      width: 250px;
+      border: 1px;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    textarea {
+      height: 70px;
+      resize: none;
+    }
+
+        @keyframes popUp{
+            0%{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100%{
+              opacity: 1;
+                transform: translateY(0);
+            }
+        }
+            
+
+
+    /* Mobile  */
+    @media (max-width: 760px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+
+      }
+
+      .container div {
+        width: 90%;
+        font-size: 16px;
+        margin-top: 100px;
+      }
+
+      #w1 {
+        font-size: 35px;
+        margin-top: 80px;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      #submit {
+        width: 180px;
+        font-size: 14px;
+      }
+
+      .if1 {
+        height: 990px;
+      }
+    }
+
+
+
+    /* Tablet */
+    @media (min-width: 761px) and (max-width: 1024px) {
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+
+      .container div {
+        font-size: 18px;
+        border-radius: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      #submit {
+        width: 180px;
+        height: 25px;
+      }
+
+      #w1 {
+        font-size: 28px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+    }
+
+    /*  Laptop */
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      #contact {
+        font-size: 18px;
+      }
+
+      .if1 {
+        height: 500px;
+      }
+    }
+
+    /* Large Screen  */
+    @media (min-width: 1440px) and (max-width: 2559px) {
+      .container {
+        width: 70%;
+        margin: auto;
+        border-radius: 20px;
+      }
+
+      #w1 {
+        font-size: 60px;
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      input[type="text"],input[type="email"],textarea,#submit {
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 20px;
+      }
+    }
+
+    /* 4K */
+    @media (min-width: 2560px) {
+      #contact, #f1 {
+        width: 50%;
+        font-size: 35px;
+        border-radius: 20px;
+      }
+
+      input[type="text"],input[type="email"],textarea,#submit {
+        width: 600px;
+        height: 100px;
+        font-size: 25px;
+      }
+
+      #name,#mail,#msg,#submit {
+        font-size: 30px;
+      }
+
+      #w1 {
+        font-size: 100px;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .container {
+        margin: 60px auto;
+        width: 80%;
+        border-radius: 20px;
+        gap: 500px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+  <h1 id="w1">Welcome to My Website</h1>
+
+  <div class="container">
+    <div id="f1">
+      <h2>Contact Form</h2>
+      <form>
+        <label for="text">Name:</label><br>
+        <input type="text" id="text" ><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message"></textarea><br><br>
+
+        <input type="submit" id="submit" value="Submit">
+      </form>
+    </div>
+
+    <div id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        contact@mrinfoware.com<br>
+        +91 10000 20000<br>
+        402, Alpha One, Nr. Ambedkar Chowk,<br>
+        150 Feet Ring Road, Rajkot, Gujarat
+      </p>
+    </div>
+  </div>
+    <div id="footer"></div>
+    
+    <!-- JavaScript -->
+      <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                header.innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                footer.innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

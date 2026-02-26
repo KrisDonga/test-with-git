@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>First project</title>
+    <!-- CSS Start -->
+    <style>
+
+        /* Body */
+        body{
+            background-image: url(images/blue1.jpg);
+            background-position: fixed;
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-color:  #84bbe8;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* container 1 starts */
+        .container{
+            display: flex;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation-name: myAnimation;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            
+        }
+        .container div{
+            background-color: rgba(255, 255, 255, 0.632);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 34%;
+            text-align: center;
+        }
+@keyframes myAnimation {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+        /* services */
+        .service {
+            text-align: center;
+            margin-top: 45%;
+        }
+
+        /* container 2 starts */
+        .container2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+            animation-name: myAnimation1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .container2 div {
+            background-color: rgba(255, 255, 255, 0.537);
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            height: auto;
+            text-align: center;
+            margin: 20px;
+        }
+      @keyframes myAnimation1 {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+        /* container 3 starts */
+        .container3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.537);
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    animation: slideInLeft 2s forwards;
+}
+
+.container3 .ht {
+    text-align: left;
+    align-self: center;
+    font-size: 20px;
+    margin-right: 5%;
+
+}
+
+.container3 img {
+    display: flex;
+    animation: slideInRight 2s forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+        /* container 4 */
+        .container4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container4 div {
+    background-color: rgba(255, 255, 255, 0.751);
+    padding: 20px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+
+    opacity: 0;
+    transform: translateX(-50px) scale(0.5);
+    animation: popSlide 0.40s forwards;
+}
+
+.container4 div:nth-child(1) {animation-delay: 0s;}
+.container4 div:nth-child(2) {animation-delay: 0.2s;}
+.container4 div:nth-child(3) {animation-delay: 0.4s;}
+.container4 div:nth-child(4) {animation-delay: 0.6s;}
+.container4 div:nth-child(5) {animation-delay: 0.8s;}
+.container4 div:nth-child(6) {animation-delay: 1s;}
+.container4 div:nth-child(7) {animation-delay: 1.2s;}
+.container4 div:nth-child(8) {animation-delay: 1.4s;}
+.container4 div:nth-child(9) {animation-delay: 1.6s;}
+
+@keyframes popSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(10px) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+        /* container 5 starts */
+        .container5{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+        .container5 div {
+            background-color: rgba(255, 255, 255, 0.537);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;   
+            height: auto;  
+
+            opacity: 0;
+            transform: translateX(-50px) scale(0.5);
+            animation: popUp 2s forwards;
+        }
+
+        .container5 div:nth-child(1) {animation-delay: 0s;}
+        .container5 div:nth-child(2) {animation-delay: 0.2s;}
+        .container5 div:nth-child(3) {animation-delay: 0.4s;}
+        .container5 div:nth-child(4) {animation-delay: 0.6s;}
+        .container5 div:nth-child(5) {animation-delay: 0.8s;}
+
+        @keyframes popUp{
+            0%{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100%{
+              opacity: 1;
+                transform: translateY(0);
+            }
+        }
+            
+          
+        /* Mobiles */
+         @media (max-width: 766px) {
+
+    body{
+    background-image: none;
+    }
+            .container {
+                margin: 20px;
+                margin-top: -40px;
+            }
+
+      .container3 {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+      }
+      .container3 img {
+    width: 240px !important;         
+     height: 100px;        
+    border-radius: 10px; 
+    margin-top: 20px; 
+      }
+       
+        }
+
+        /* tablet */
+ @media (min-width: 761px) and (max-width: 1023px) {
+            .container {
+        margin-bottom: 130px;
+        margin-top: -50px;
+            }
+      .container3 {
+        padding: 30px;
+        align-items: flex-start;
+        margin: 20px;
+      }
+      .container3 img {
+      max-width:300px;
+      height: auto;
+      }
+      .container3 .ht1  {
+        align-self: center;
+      }
+      .service{
+        margin-top: -10px;
+      }
+      
+    }
+    /* laptop */
+    @media (min-width: 1024px) and (max-width: 2559px) {
+        .container {
+        margin-bottom: 130px;
+        margin-top: -20px;
+            }
+      .container3 {
+        padding: 30px;
+        align-items: flex-start;
+        margin: 20px;
+      }
+      .container3 img {
+      max-width:400px;
+      height: auto;
+      }
+      .container3 .ht1  {
+        align-self: center;
+      }
+
+}
+
+ /* 4K Display */
+@media (min-width: 2560px) {
+    body {
+        font-size: 35px;
+        overflow-x: hidden;
+    }
+    .container {
+        margin-top: 200px;
+        margin-bottom: 800px;
+    }
+    .container3 {
+        padding: 60px;
+        margin: 40px 20;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 40px;
+    }
+    .container3 img {
+        width: 500px !important;
+        height: auto;
+    }
+    .container2 div,
+    .container5 div {
+        max-width: 600px;
+        font-size: 40px;
+        width: 30%;
+        height: auto;
+    }
+    .container4 div {
+        width: 180px;
+        height: 180px;
+        font-size: 26px;
+    }
+    .container2 img,.container4 img {
+    width: 80px !important;
+    height: auto !important;
+}
+.if1{
+    height: 600px;
+}
+
+}
+
+    </style>    
+</head>
+<body>
+
+
+<div id="header"></div>
+ 
+<div class="container">
+    <div>
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple webpage with a navigation bar.</p>
+    </div>
+</div>
+<!-- Our Services -->
+<h1 class="service">Our Services</h1>
+
+<!-- container 2 -->
+<div class="container2">
+    <div>
+        <img src="images/h1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>HTML</h2>
+        <p>HTML is the standard markup language for creating Web pages</p>
+    </div>
+    <div>
+        <img src="images/c1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>CSS</h2>
+        <p>CSS is the language we use to style a Web page.</p>
+    </div>
+    <div>
+        <img src="images/j1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>JAVASCRIPT</h2>
+        <p>JavaScript is the programming language of the web.
+        It can calculate, manipulate and validate data.</p>
+    </div>
+    <div>
+        <img src="images/py1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>PYTHON</h2>
+        <p>Python is a popular programming language. 
+            It was created by Guido van Rossum, and released in 1991.</p>
+    </div>
+    <div>
+        <img src="images/s1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>SQL</h2>
+        <p>SQL is a standard language for storing, 
+            manipulating and retrieving data in databases.</p>
+    </div>
+    <div>
+        <img src="images/r1.png" style="width:40px; height:40px; border-radius:25%;">
+        <h2>REACT</h2>
+        <p>React is a JavaScript library for building user interfaces.
+            React is used to build single-page applications.</p>
+    </div>
+  </div>
+
+    <!-- container 3 -->
+
+    <div class="container3">
+        <div class="ht1">
+            <h2> HOW CAN WE HELP</h2>
+            <p >"We’re here to make your journey easier by providing trusted information,quick support, and the best solutions for your needs."
+                    Want me to make a few different styles (professional, casual, modern) so you can choose?</p>
+        </div>
+        <div class="ht2">
+                    <img src="images/re1.jpg" style="width:600px; height:400px; border-radius:10%;">
+        </div>
+    </div>
+    <!-- technologies we use -->
+     <center><h1>Technologies we use</h1></center>
+
+     <!-- container 4 -->
+
+      <div class="container4">
+        <div>
+            <img src="images/h1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>HTML</h2>
+        </div>
+         <div>
+            <img src="images/c1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>CSS</h2>
+        </div>
+         <div>
+            <img src="images/py1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>PYTHON</h2>
+        </div>
+         <div>
+            <img src="images/r1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>REACT</h2>
+        </div>
+         <div>
+            <img src="images/s1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>SQL</h2>
+        </div>
+         <div>
+            <img src="images/j1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>JAVA</h2>
+        </div>
+        <div>
+            <img src="images/h1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2 >HTML</h2>
+        </div>
+        <div>
+            <img src="images/c1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2>CSS</h2>
+        </div>
+        <div>
+            <img src="images/s1.png" style="width:40px; height:40px; border-radius:25%;">
+            <h2 >MYSQL</h2>
+        </div>
+
+      </div>
+      
+      <!-- container 5 -->
+
+<center><h1>Our WorkFlow</h1></center>
+
+    <div class="container5">    
+              
+        <div>
+            <h2>Requirement Analysis</h2>
+            <p>Understanding your business needs and project requirements.</p>
+        </div>
+         <div>
+            <h2>Planning & Strategy</h2>
+            <p>Creating a structured roadmap for development.</p>
+        </div>
+         <div>
+            <h2>Design & Development</h2>
+            <p>Building scalable and intuitive solutions.</p>
+        </div>
+         <div>
+            <h2>Testing & Quality Assurance</h2>
+            <p>Ensuring reliability, security, and performance.</p>
+        </div>
+         <div>
+            <h2>Deployment & Maintenance</h2>
+            <p>Seamless deployment with ongoing support.</p>
+        </div>
+        </div>
+
+        <div id="footer"></div>
+
+        <!-- JavaScript -->
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => header.innerHTML = data);
+
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => footer.innerHTML = data);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<style>
+/* Body */
+body {
+  background-color: #84bbe8;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 25px;
+  gap: 30px;
+}
+
+.container .c1 {
+  text-align: left;
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+  animation: slideInLeft 2s forwards;
+}
+
+.container img {
+  border-radius: 20px;
+  width: 400px;
+  height: auto;
+  animation: slideInRight 2s forwards;
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .container .c1 {
+    text-align: center;
+    font-size: 15px;
+    margin-right: 0;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .if2 {
+    height: 250px;
+    margin-bottom: -120px;
+  }
+  .if1 {
+        height: 909px !important; 
+    }
+  }
+
+/* tablet */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .container .c1 {
+    font-size: 15px;
+    margin-right: 0;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .if1 {
+    height: 380px;
+  }
+}
+
+/* 4k */
+@media (min-width: 2560px) {
+  .container {
+    flex-direction: row;
+    padding: 100px;
+  }
+
+  .container .c1 {
+    font-size: 35px;
+  }
+
+  .container img {
+    width: 500px;
+  }
+  .if1 {
+    height: 600px;
+  }
+  .about1{
+    font-size: 80px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header Link -->
+<div id="header"></div>
+
+<!-- Container 1 -->
+<center><h1 class="about1">About Us</h1></center>
+<div class="container">
+  <div class="c1">
+    <p>Who We Are MR Infoware is a leading IT solutions company providing website development, mobile app development, custom software solutions, UI/UX design, graphic design, and digital marketing services. Our mission is to help startups, SMEs, and enterprises grow by leveraging cutting-edge technologies and creative strategies.
+    Global expertise in IT solutions & digital transformation.
+    Specialized in websites, apps, software, and branding.
+    Customer-first approach ensuring business growth.</p>
+  </div>
+  <div>
+    <img src="images/about.jpg" width="400px" height="300px">
+  </div>
+</div>
+
+<!-- Footer Link -->
+<div id="footer"></div>
+
+<!-- JavaScript -->
+       <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                header.innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                footer.innerHTML = data;
+            });
+    </script>
+</body>
+</html>
