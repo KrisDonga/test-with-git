@@ -1,227 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services</title>
-<style>
-/* Body */
-body {
-    background-color: #84bbe8;
-    margin: 0;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <style>
+      /* Body */
+      body {
+        background-color: #84bbe8e1;
+        margin: 0;
+      }
 
-/* Container */
-.container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-        .container div {
-            background-color: rgba(255, 255, 255, 0.537);
-            padding: 20px;
-            border-radius: 20px;
-            width: 300px;
-            height: auto;
-            text-align: center;
-            margin: 20px;
-
-            opacity: 0;
-            transform: translateX(-50px) scale(0.5);
-            animation: popUp 2s forwards;
-            
-        }
-
-        .container div:nth-child(1) {animation-delay: 0s;}
-        .container div:nth-child(2) {animation-delay: 0.2s;}
-        .container div:nth-child(3) {animation-delay: 0.4s;}
-        .container div:nth-child(4) {animation-delay: 0.6s;}
-        .container div:nth-child(5) {animation-delay: 0.8s;}
-        .container div:nth-child(6) {animation-delay: 0.8s;}
-
-        @keyframes popUp{
-            0%{
-                opacity: 0;
-                transform: translateY(100px);
-            }
-            100%{
-              opacity: 1;
-                transform: translateY(0);
-            }
-        }
-            
-.container img {
-    width: 20px;
-    height: 20px;
-    border-radius: 25%;
-}
-
-iframe {
-    width: 100%;
-    border: none;
-}
-
-.if2 {
-    height: 100px;
-}
-
-.if1 {
-    height: 350px;
-}
-
- /* mobile */
-@media (max-width: 760px) {
-    .if2 {
-        height: 250px; 
-        margin-bottom: -90px;
-    }
-
-    .if1 {
-        height: 999px; 
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container div {
-        width: 70%; 
-        margin: 10px auto;
-    }
-}
-
-/* tablet */
-@media (min-width: 761px) and (max-width: 1024px) {
-    .container div {
-        width: 200px;
-        margin: 20px;
-    }
-      .container img {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 20px; 
-    }
-
-    .if2 { 
-        height: 100px;
-     }
-    .if1 {
-         height: 400px; 
-        }
-}
-
-/* laptop */
-@media (min-width: 1025px) and (max-width: 2559px) {
-    .container div {
-        width: 300px;
-        margin: 20px;
-        font-size: 20px;
-    }
-      .container img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 20px; 
-    }
-
-    .if2 { 
-        height: 100px; 
-    }
-    .if1 { 
-        height: 350px; 
-    }
-}
-
-/* 4k */
-@media (min-width: 2560px) {
-     .container div {
-        width: 350px;
-        padding: 30px;
-        text-align: center; 
+      /* Container */
+      .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 30px;
-    }
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+      }
+      .container div {
+        background-color: rgba(255, 255, 255, 0.537);
+        padding: 20px;
+        border-radius: 20px;
+        width: 300px;
+        height: auto;
+        text-align: center;
+        margin: 20px;
 
-    .container img {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px; 
-    }
+        opacity: 0;
+        transform: translateX(-50px) scale(0.5);
+        animation: popUp 2s forwards;
+      }
 
-    .if2 { 
-        height: 150px; 
-    }
-    .if1 { 
-        height: 600px; 
-    }
-    .our1{
-        font-size: 80px;
-    }
-}
-</style>
-</head>
-<body>
+      .container div:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .container div:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .container div:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .container div:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      .container div:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      .container div:nth-child(6) {
+        animation-delay: 0.8s;
+      }
 
-<!-- Header -->
-<div id="header"></div>
+      @keyframes popUp {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-<center><h1 class="our1">Our Services</h1></center>
+      .container img {
+        width: 20px;
+        height: 20px;
+        border-radius: 25%;
+      }
 
-<!-- Services Container -->
-<div class="container">
-    <div>
-        <img src="images/h1.png">
+      iframe {
+        width: 100%;
+        border: none;
+      }
+
+      .if2 {
+        height: 100px;
+      }
+
+      .if1 {
+        height: 350px;
+      }
+
+      /* mobile */
+      @media (max-width: 760px) {
+        .if2 {
+          height: 250px;
+          margin-bottom: -90px;
+        }
+
+        .if1 {
+          height: 999px;
+        }
+
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .container div {
+          width: 70%;
+          margin: 10px auto;
+        }
+      }
+
+      /* tablet */
+      @media (min-width: 761px) and (max-width: 1024px) {
+        .container div {
+          width: 200px;
+          margin: 20px;
+        }
+        .container img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 20px;
+        }
+
+        .if2 {
+          height: 100px;
+        }
+        .if1 {
+          height: 400px;
+        }
+      }
+
+      /* laptop */
+      @media (min-width: 1025px) and (max-width: 2559px) {
+        .container div {
+          width: 300px;
+          margin: 20px;
+          font-size: 20px;
+        }
+        .container img {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 20px;
+        }
+
+        .if2 {
+          height: 100px;
+        }
+        .if1 {
+          height: 350px;
+        }
+      }
+
+      /* 4k */
+      @media (min-width: 2560px) {
+        .container div {
+          width: 350px;
+          padding: 30px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 30px;
+        }
+
+        .container img {
+          width: 200px;
+          height: 200px;
+          margin-bottom: 20px;
+        }
+
+        .if2 {
+          height: 150px;
+        }
+        .if1 {
+          height: 600px;
+        }
+        .our1 {
+          font-size: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <center><h1 class="our1">Our Services</h1></center>
+
+    <!-- Services Container -->
+    <div class="container">
+      <div>
+        <img src="images/h1.png" />
         <h2>HTML</h2>
         <p>HTML is the standard markup language for creating Web pages.</p>
-    </div>
-    <div>
-        <img src="images/c1.png" >
+      </div>
+      <div>
+        <img src="images/c1.png" />
         <h2>CSS</h2>
         <p>CSS is the language we use to style a Web page.</p>
-    </div>
-    <div>
-        <img src="images/j1.png">
+      </div>
+      <div>
+        <img src="images/j1.png" />
         <h2>JAVASCRIPT</h2>
-        <p>JavaScript is the programming language of the web. It can calculate, manipulate and validate data.</p>
-    </div>
-    <div>
-        <img src="images/py1.png">
+        <p>
+          JavaScript is the programming language of the web. It can calculate,
+          manipulate and validate data.
+        </p>
+      </div>
+      <div>
+        <img src="images/py1.png" />
         <h2>PYTHON</h2>
-        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
-    </div>
-    <div>
-        <img src="images/s1.png">
+        <p>
+          Python is a popular programming language. It was created by Guido van
+          Rossum, and released in 1991.
+        </p>
+      </div>
+      <div>
+        <img src="images/s1.png" />
         <h2>SQL</h2>
-        <p>SQL is a standard language for storing, manipulating and retrieving data in databases.</p>
-    </div>
-    <div>
-        <img src="images/r1.png">
+        <p>
+          SQL is a standard language for storing, manipulating and retrieving
+          data in databases.
+        </p>
+      </div>
+      <div>
+        <img src="images/r1.png" />
         <h2>REACT</h2>
-        <p>React is a JavaScript library for building user interfaces. React is used to build single-page applications.</p>
+        <p>
+          React is a JavaScript library for building user interfaces. React is
+          used to build single-page applications.
+        </p>
+      </div>
     </div>
-</div>
 
-<!-- Footer -->
-<div id="footer"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-<!-- JavaScript -->
-     <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                header.innerHTML = data;
-            });
+    <!-- JavaScript -->
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          header.innerHTML = data;
+        });
 
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                footer.innerHTML = data;
-            });
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          footer.innerHTML = data;
+        });
     </script>
-
-</body>
+  </body>
 </html>
